@@ -1,0 +1,1 @@
+CQ.wcm.ComponentList.MAX_GROUPS = 12;

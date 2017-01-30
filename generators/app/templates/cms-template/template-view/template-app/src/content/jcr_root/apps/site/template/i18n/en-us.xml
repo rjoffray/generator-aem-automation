@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en-us"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="sling:Folder">
+    <Book_x0020_Now
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Book Now"/>
+    <Book_x0020_Your_x0020_Vacation
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Book Your Vacation"/>
+    <Book_x0020_Your_x0020_Vacation_x0020_Now
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Book Your Vacation Now"/>
+    <Our_x0020_Brand_x0020_Collection
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Our Brand Collection"/>
+    <Our_x0020_Resorts_x0020__x0026__x0020_Spas
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:key="Our Resorts &amp; Spas&#xa;"
+        sling:message="Our Resorts &amp; Spas"/>
+    <Our_x0020_Resorts_x0020_Spas
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Our Resorts &amp; Spas"/>
+    <Special_x0020_Offers
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Special Offers"/>
+    <View_x0020_Reservations
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="View Reservations"/>
+    <Your_x0020_Dreams_x0020_Getaway
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your Dreams Getaway"/>
+    <Your_x0020_Meeting
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your Meeting"/>
+    <Your_x0020_Spa_x0020_Day
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your Spa Day"/>
+    <Your_x0020_Wedding
+        jcr:mixinTypes="[sling:Message]"
+        jcr:primaryType="nt:folder"
+        sling:message="Your Wedding"/>
+</jcr:root>

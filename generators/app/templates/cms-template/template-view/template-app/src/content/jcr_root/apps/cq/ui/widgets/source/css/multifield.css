@@ -1,0 +1,8 @@
+/* **************************************************** */
+/* Custom css overrides for AV multifield cq dialog fields */
+/* **************************************************** */
+.cq-multifield-itemct .x-form-text,
+.cq-multifield-itemct .cq-selection,
+.cq-multifield-itemct .cq-selection .x-form-field-wrap {
+	width: 325px !important;
+}

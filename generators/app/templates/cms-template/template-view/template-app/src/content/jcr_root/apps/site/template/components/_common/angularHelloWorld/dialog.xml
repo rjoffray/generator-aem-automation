@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="cq:Dialog"
+          height="600"
+          title="Media ParagrWorld Varaph"
+          width="800"
+          xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1 jcr:primaryType="cq:Panel"
+                  title="Content">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <fieldset
+                            jcr:primaryType="cq:Widget"
+                            collapsed="{Boolean}false"
+                            collapsible="{Boolean}false"
+                            padding="10"
+                            xtype="dialogfieldset">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                            <helloWorldVar
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Hello World Output Var"
+                                    fieldDescription="This is sent to angular from sightly"
+                                    name="./helloWorldVariable"
+                                    readOnly="false"
+                                    xtype="textfield" />
+                        </items>
+                    </fieldset>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

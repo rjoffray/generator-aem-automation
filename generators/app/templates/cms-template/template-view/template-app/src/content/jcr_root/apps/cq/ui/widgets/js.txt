@@ -1,0 +1,16 @@
+#base=source
+
+override/ComponentList.js
+
+widgets/form/CustomMultiField.js
+widgets/form/CheckboxBoolean.js
+widgets/form/structuredMultiList/StructuredMultiList.js
+widgets/form/structuredMultiList/Slide.js
+widgets/form/structuredMultiList/SlideSettingsPanel.js
+widgets/form/structuredMultiList/SlidesPanel.js
+
+# Custom Dialog
+utils/dialog_deals_themes.js
+utils/dialog_tracking_tags.js
+utils/utils.general.js
+utils/dialog_video.js

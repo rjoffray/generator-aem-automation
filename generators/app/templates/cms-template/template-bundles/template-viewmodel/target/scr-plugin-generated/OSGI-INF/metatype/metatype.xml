@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="com.alg.cms.template.viewmodel.components.TemplateComponent" name="%com.alg.cms.template.viewmodel.components.TemplateComponent.name" description="%com.alg.cms.template.viewmodel.components.TemplateComponent.description"/>
+    <Designate pid="com.alg.cms.template.viewmodel.components.TemplateComponent">
+        <Object ocdref="com.alg.cms.template.viewmodel.components.TemplateComponent"/>
+    </Designate>
+</metatype:MetaData>

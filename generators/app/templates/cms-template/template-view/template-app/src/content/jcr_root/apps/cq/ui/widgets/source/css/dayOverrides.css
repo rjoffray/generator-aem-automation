@@ -1,0 +1,22 @@
+/* **************************************************** */
+/* Overrides for strange author dialog CSS behaviors    */
+/* **************************************************** */
+.x-fieldset.x-panel-collapsed, .x-fieldset.x-form-label-left.x-panel-collapsed, .x-form-text.x-form-field { -moz-box-sizing: content-box; }
+#CQ .x-form-check-wrap input { vertical-align: middle; }
+.ext-strict #CQ .x-form-text { height: 21px; }
+#CQ .x-form-check-wrap .x-form-radio { margin: 0px 0px 0px 1px; }
+
+/* **************************************************** */
+/* Custom css overrides for multifield cq dialog fields */
+/* **************************************************** */
+.multifield .x-window {
+	min-width: 650px;
+}
+.cq-multifield-itemct .x-form-text,
+.cq-multifield-itemct .cq-selection,
+.cq-multifield-itemct .cq-selection .x-form-field-wrap {
+	width: 167px !important;
+}
+.cq-multifield-itemct .cq-selection .x-form-field {
+	width: 140px !important;
+}

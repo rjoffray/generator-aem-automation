@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>ALG CMS Site TEMPLATE Bundles > Common</name>
+    <description>AMR Common</description>
+
+    <parent>
+        <artifactId>template-bundles</artifactId>
+        <groupId>com.alg.cms.template</groupId>
+        <version>0.0.1</version>
+    </parent>
+
+    <artifactId>template-common</artifactId>
+    <packaging>bundle</packaging>
+
+    <build>
+        <plugins>
+             <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-scr-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+				<groupId>org.apache.sling</groupId>
+				<artifactId>maven-sling-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <configuration>
+                   <instructions>
+                       <Import-Package>*</Import-Package>
+                       <Bundle-Activator>com.alg.cms.template.common.Activator</Bundle-Activator>
+                       <Export-Package>com.alg.cms.template.common.*;version=${project.version}</Export-Package>
+                       <Sling-Bundle-Resources>/var/classes</Sling-Bundle-Resources>
+                       <Sling-Initial-Content>SLINGINF/sling/servlets/;overwrite:=true;uninstall:=true;path:=/apps/sling/servlets,SLING-INF/public/;overwrite:=true;uninstall:=true;path:=/apps/public
+                       </Sling-Initial-Content>
+                   </instructions>
+                </configuration>
+            </plugin>
+                        
+            <!-- Run JUnit tests and generate their coverage reports -->
+        	<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+			</plugin>
+			
+            <!-- Additional configurations for source code analysis -->
+            <plugin>
+            	<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+			</plugin>
+        </plugins>
+    </build>
+
+</project>

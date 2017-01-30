@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>ALG CMS Site TEMPLATE View > Content</name>
+    <description>This is a CQ Package Project, where all physical content is stored </description>
+
+    <parent>
+        <artifactId>template-view</artifactId>
+        <groupId>com.alg.cms.template</groupId>
+        <version>0.0.1</version>
+    </parent>
+
+    <artifactId>template-content</artifactId>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+				<configuration>
+					<filters>
+
+                        <filter>
+                            <root>/content/site/template</root>
+                            <mode>replace</mode>
+                        </filter>
+
+    				</filters>
+				</configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+    </dependencies>
+</project>

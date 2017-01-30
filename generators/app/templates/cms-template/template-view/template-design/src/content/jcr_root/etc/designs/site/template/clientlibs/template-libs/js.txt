@@ -1,0 +1,21 @@
+## Libraries
+../../js/libs/jquery/jquery-2.2.3.min.js
+../../js/libs/bootstrap/bootstrap.3.3.6.js
+../../js/libs/moment/moment-with-locales.js
+../../js/libs/uri/uri.js
+../../js/libs/lodash/lodash-3.10.1.js
+../../js/libs/amplify/amplify-1.1.2.js
+../../js/libs/toastr/toastr-2.1.2.js
+../../js/libs/angular-1.5.5/angular.min.js
+../../js/libs/angular-1.5.5/ui-bootstrap-tpls.js
+../../js/libs/angular-1.5.5/angular-resource.min.js
+../../js/libs/angular-1.5.5/angular-sanitize.min.js
+../../js/libs/angular-1.5.5/angular-touch.min.js
+../../js/libs/angular-1.5.5/angular-animate.min.js
+../../js/libs/angular-1.5.5/angular-idle.min.js
+../../js/libs/angular-1.5.5/angular-recaptcha.min.js
+../../js/libs/jquery-mask/jquery.mask.js
+../../js/libs/jquery-touchSwipe/jquery.touchSwipe.1.6.4.js
+
+## Site Level Items
+../../js/common/site.init.js
