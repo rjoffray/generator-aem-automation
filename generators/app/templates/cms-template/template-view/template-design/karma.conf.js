@@ -16,19 +16,19 @@ module.exports = function (config) {
         // list of files / patterns to load in the browser
         files: [
             'src/content/jcr_root/etc/designs/site/template/js/libs/jquery/jquery-2.2.3.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/bootstrap/bootstrap.3.3.6.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/moment/moment-with-locales.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/amplify/amplify-1.1.2.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/ui-bootstrap-tpls.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular-resource.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular-sanitize.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular-touch.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular-animate.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular-idle.min.js',
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/angular-1.5.5/angular-recaptcha.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/bootstrap/bootstrap.3.3.6.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/moment/moment-with-locales.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/amplify/amplify-1.1.2.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/ui-bootstrap-tpls.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular-resource.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular-sanitize.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular-touch.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular-animate.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular-idle.min.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/angular-1.5.5/angular-recaptcha.min.js',
 
-            'src/content/jcr_root/etc/designs/site/micro/js/libs/lodash/lodash-3.10.1.js',
+            'src/content/jcr_root/etc/designs/site/template/js/libs/lodash/lodash-3.10.1.js',
             'node_modules/jasmine-jquery/lib/jasmine-jquery.js',
             // 'node_modules/angular-mocks/angular-mocks.js',
 
@@ -48,7 +48,7 @@ module.exports = function (config) {
 
 
         // list of files to exclude
-        exclude: ['src/test/microTestTemplate.js'],
+        exclude: ['src/test/templateTestTemplate.js'],
 
 
         // test results reporter to use
@@ -72,7 +72,7 @@ module.exports = function (config) {
             // source files, that you wanna generate coverage for
             // do not include tests or libraries
             // (these files will be instrumented by Istanbul)
-            'src/content/jcr_root/etc/designs/site/micro/js/dreamsresorts/components/**/*.js': ['coverage']
+            '../template-app/src/content/jcr_root/apps/site/template/**/**/**/clientLibs/*.js': ['coverage']
         },
 
 
