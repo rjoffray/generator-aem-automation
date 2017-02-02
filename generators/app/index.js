@@ -8,7 +8,7 @@ var fs = require('fs');
 var baseTemplatePath = __dirname + "/templates-real";
 var baseDestinationPath = __dirname + "/dist";
 var baseStructure = [];
-var find = 'template';
+var find = '{template}';
 var re = new RegExp(find, 'g');
 module.exports = Generator.extend({
   prompting: function () {
@@ -53,7 +53,7 @@ module.exports = Generator.extend({
                     //console.log("fileTemplatePath: " + path + "/" + file.name)
                     var newFileName  = file.name.replace(re,_this.props.siteName);
                     var relativeFilePath = baseDestinationPath  + path.substring(_this.templatePath().length).replace(re,_this.props.siteName) + "/" + newFileName;
-                    console.log("relativeFilePath: " + relativeFilePath)
+                    console.log("relativeFilePath: " + relativeFilePath);
                     if(file.name.startsWith("__")){
                         _this.fs.copyTpl(fileTemplatePath, relativeFilePath, _this.props);
                     }else{
