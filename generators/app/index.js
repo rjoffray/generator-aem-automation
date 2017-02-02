@@ -8,7 +8,7 @@ var fs = require('fs');
 var baseTemplatePath = __dirname + "/templates-real";
 var baseDestinationPath = __dirname + "/dist";
 var baseStructure = [];
-var find = '\<%= siteName %\>';
+var find = 'template';
 var re = new RegExp(find, 'g');
 module.exports = Generator.extend({
   prompting: function () {
@@ -45,7 +45,7 @@ module.exports = Generator.extend({
                     var relativeFolderPath = baseDestinationPath + newPath + "/" + newFolderName;
                     console.log("relativeFolderPath: " + relativeFolderPath)
                     if (!fs.existsSync(relativeFolderPath)){
-                        //fs.mkdirSync(relativeFolderPath);
+                        fs.mkdirSync(relativeFolderPath);
                     }
                 },
                 function (file, path) {
@@ -55,9 +55,9 @@ module.exports = Generator.extend({
                     var relativeFilePath = baseDestinationPath  + path.substring(_this.templatePath().length).replace(re,_this.props.siteName) + "/" + newFileName;
                     console.log("relativeFilePath: " + relativeFilePath)
                     if(file.name.startsWith("__")){
-                        //_this.fs.copyTpl(fileTemplatePath, relativeFilePath, _this.props);
+                        _this.fs.copyTpl(fileTemplatePath, relativeFilePath, _this.props);
                     }else{
-                        //_this.fs.copy(fileTemplatePath, relativeFilePath);
+                        _this.fs.copy(fileTemplatePath, relativeFilePath);
                     }
 
                 });
