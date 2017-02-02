@@ -54,11 +54,11 @@ module.exports = Generator.extend({
                     var newFileName  = file.name.replace(re,_this.props.siteName);
                     var relativeFilePath = baseDestinationPath  + path.substring(_this.templatePath().length).replace(re,_this.props.siteName) + "/" + newFileName;
                     console.log("relativeFilePath: " + relativeFilePath);
-                    if(file.name.startsWith("__")){
+                    if (path.indexOf("fonts") < 0 && path.indexOf("libs") < 0 && file.name.indexOf(".zip") < 0){
                         _this.fs.copyTpl(fileTemplatePath, relativeFilePath, _this.props);
-                    }else{
-                        _this.fs.copy(fileTemplatePath, relativeFilePath);
                     }
+
+
 
                 });
             console.log('there are a total of: ', total.folders, ' folders and ', total.files, ' files');
