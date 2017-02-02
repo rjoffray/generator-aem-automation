@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>ALG CMS Site TEMPLATE Bundles > Services</name>
+    <name>ALG CMS Site <%= siteName %> Bundles > Services</name>
     <description>This is the Core OSGi project. It holds all the core OSGi bundle code is standard java code that will be compiled into a bundle and deployed into the Felix console. </description>
     
     <parent>
-        <artifactId>template-bundles</artifactId>
-        <groupId>com.alg.cms.template</groupId>
+        <artifactId><%= siteName %>-bundles</artifactId>
+        <groupId>com.alg.cms.<%= siteName %></groupId>
         <version>0.0.1</version>
     </parent>
     
-    <artifactId>template-services</artifactId>
+    <artifactId><%= siteName %>-services</artifactId>
     <packaging>bundle</packaging>
     
     <build>
@@ -30,8 +30,8 @@
                 <configuration>
                    <instructions>
                        <Import-Package>*</Import-Package>
-                       <Bundle-Activator>com.alg.cms.template.services.Activator</Bundle-Activator>
-                       <Export-Package>com.alg.cms.template.services.*;version=${project.version}</Export-Package>
+                       <Bundle-Activator>com.alg.cms.<%= siteName %>.services.Activator</Bundle-Activator>
+                       <Export-Package>com.alg.cms.<%= siteName %>.services.*;version=${project.version}</Export-Package>
                        <Sling-Bundle-Resources>/var/classes</Sling-Bundle-Resources>
                        <Sling-Initial-Content>SLINGINF/sling/servlets/;overwrite:=true;uninstall:=true;path:=/apps/sling/servlets,SLING-INF/public/;overwrite:=true;uninstall:=true;path:=/apps/public
                        </Sling-Initial-Content>

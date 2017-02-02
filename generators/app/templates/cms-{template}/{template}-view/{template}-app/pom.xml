@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<name>ALG CMS Site TEMPLATE View > App</name>
+	<name>ALG CMS Site <%= siteName %> View > App</name>
 	<description>The package containing the AEM app code</description>
 
 	<parent>
-		<artifactId>template-view</artifactId>
-		<groupId>com.alg.cms.template</groupId>
+		<artifactId><%= siteName %>-view</artifactId>
+		<groupId>com.alg.cms.<%= siteName %></groupId>
 		<version>0.0.1</version>
 	</parent>
 
-	<artifactId>template-app</artifactId>
+	<artifactId><%= siteName %>-app</artifactId>
 
 	<build>
 		<plugins>
@@ -19,11 +19,11 @@
 				<configuration>
 					<filters>
 						<filter>
-							<root>/apps/site/template</root>
+							<root>/apps/site/<%= siteName %></root>
 							<mode>replace</mode>
 						</filter>
 						<filter>
-							<root>/apps/site/template.config</root>
+							<root>/apps/site/<%= siteName %>.config</root>
 							<mode>replace</mode>
 						</filter>
 						<filter>

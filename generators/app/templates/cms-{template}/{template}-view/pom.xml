@@ -1,37 +1,37 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>ALG CMS Site TEMPLATE View</name>
+    <name>ALG CMS Site <%= siteName %> View</name>
     <description>The view packages contain view related packages that are not deployed as jars</description>
 
     <parent>
-		<groupId>com.alg.cms.template</groupId>
-		<artifactId>cms-template</artifactId>
+		<groupId>com.alg.cms.<%= siteName %></groupId>
+		<artifactId>cms-<%= siteName %></artifactId>
 		<version>0.0.1</version>
 	</parent>
 
-	<artifactId>template-view</artifactId>
+	<artifactId><%= siteName %>-view</artifactId>
 	<packaging>pom</packaging>
 
     <dependencies>
 		<dependency>
-			<groupId>com.alg.cms.template</groupId>
-			<artifactId>template-services</artifactId>
+			<groupId>com.alg.cms.<%= siteName %></groupId>
+			<artifactId><%= siteName %>-services</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.alg.cms.template</groupId>
-			<artifactId>template-viewmodel</artifactId>
+			<groupId>com.alg.cms.<%= siteName %></groupId>
+			<artifactId><%= siteName %>-viewmodel</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
 	<modules>
-		<module>template-app</module>
-		<module>template-content</module>
-		<module>template-design</module>
+		<module><%= siteName %>-app</module>
+		<module><%= siteName %>-content</module>
+		<module><%= siteName %>-design</module>
 	</modules>
 
 </project>

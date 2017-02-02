@@ -3,6 +3,6 @@
     jcr:mixinTypes="[mix:lockable,rep:AccessControllable,sling:Redirect]"
     jcr:primaryType="sling:OrderedFolder"
     sling:resourceType="sling:redirect"
-    sling:target="/content/site/template/en_us">
+    sling:target="/content/site/<%= siteName %>/en_us">
 
 </jcr:root>

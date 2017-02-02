@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>ALG CMS Site TEMPLATE View > Design</name>
+    <name>ALG CMS Site <%= siteName %> View > Design</name>
     <description>This is a CQ Package Project, where designs are stored </description>
 
     <parent>
-        <artifactId>template-view</artifactId>
-        <groupId>com.alg.cms.template</groupId>
+        <artifactId><%= siteName %>-view</artifactId>
+        <groupId>com.alg.cms.<%= siteName %></groupId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>template-design</artifactId>
+    <artifactId><%= siteName %>-design</artifactId>
 
     <build>
         <plugins>
@@ -19,7 +19,7 @@
                 <configuration>
 					<filters>
 						<filter>
-							<root>/etc/designs/site/template</root>
+							<root>/etc/designs/site/<%= siteName %></root>
 							<mode>replace</mode>
 						</filter>
 						<filter>

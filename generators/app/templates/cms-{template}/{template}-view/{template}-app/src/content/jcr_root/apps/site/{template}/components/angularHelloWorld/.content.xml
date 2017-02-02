@@ -3,4 +3,4 @@
           jcr:primaryType="cq:Component"
           jcr:title="Angular Hello World"
           allowedParents="[*/parsys]"
-          componentGroup="TEMPLATE-hello-world"/>
+          componentGroup="hello-world"/>

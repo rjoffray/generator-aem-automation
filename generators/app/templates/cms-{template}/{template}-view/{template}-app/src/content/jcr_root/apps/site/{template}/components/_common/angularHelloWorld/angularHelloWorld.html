@@ -1,4 +1,4 @@
 <div class="angularhelloworld-container" ng-controller="angularhelloworld-controller as hc" ng-init="hc.hello='${properties.helloWorldVariable || 'Nothing set from sightly'}'">
     This is the output: {{hc.hello}}
 </div>
-<script data-sly-test="${wcmmode.edit}">alg.cms.template.utils.initAngularController('.angularhelloworld-container');</script>
+<script data-sly-test="${wcmmode.edit}">alg.cms.<%= siteName %>.utils.initAngularController('.angularhelloworld-container');</script>

@@ -3,12 +3,12 @@
           jcr:description="Hello World"
           jcr:primaryType="cq:Template"
           jcr:title="Hello World Page"
-          allowedPaths="/content/site/template(/.*)?"
+          allowedPaths="/content/site/<%= siteName %>(/.*)?"
           ranking="{Long}1">
     <jcr:content
-            cq:designPath="/etc/designs/site/template"
+            cq:designPath="/etc/designs/site/<%= siteName %>"
             jcr:primaryType="cq:PageContent"
-            sling:resourceType="/apps/site/template/pages/helloworld">
+            sling:resourceType="/apps/site/<%= siteName %>/pages/helloworld">
 
     </jcr:content>
 </jcr:root>

@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>ALG CMS Site TEMPLATE Bundles > Viewmodel</name>
+    <name>ALG CMS Site <%= siteName %> Bundles > Viewmodel</name>
     <description>Contains all java classes related to assisting the view</description>
 
     <parent>
-        <artifactId>template-bundles</artifactId>
-        <groupId>com.alg.cms.template</groupId>
+        <artifactId><%= siteName %>-bundles</artifactId>
+        <groupId>com.alg.cms.<%= siteName %></groupId>
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>template-viewmodel</artifactId>
+    <artifactId><%= siteName %>-viewmodel</artifactId>
     <packaging>bundle</packaging>
 
     <build>
@@ -30,8 +30,8 @@
                 <configuration>
                    <instructions>
                        <Import-Package>*</Import-Package>
-                       <Bundle-Activator>com.alg.cms.template.viewmodel.Activator</Bundle-Activator>
-                       <Export-Package>com.alg.cms.template.viewmodel.*;version=${project.version}</Export-Package>
+                       <Bundle-Activator>com.alg.cms.<%= siteName %>.viewmodel.Activator</Bundle-Activator>
+                       <Export-Package>com.alg.cms.<%= siteName %>.viewmodel.*;version=${project.version}</Export-Package>
                        <Sling-Bundle-Resources>/var/classes</Sling-Bundle-Resources>
                        <Sling-Initial-Content>SLINGINF/sling/servlets/;overwrite:=true;uninstall:=true;path:=/apps/sling/servlets,SLING-INF/public/;overwrite:=true;uninstall:=true;path:=/apps/public
                        </Sling-Initial-Content>

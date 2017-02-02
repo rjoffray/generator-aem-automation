@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <name>ALG CMS Site TEMPLATE</name>
+    <name>ALG CMS Site <%= siteName %></name>
     <description>This is the project for the TEMPLATE site</description>
 
 	<properties>
-		<group.package.name>com.alg.cms.template</group.package.name>
+		<group.package.name>com.alg.cms.<%= siteName %></group.package.name>
 	</properties>
 
     <parent>
@@ -14,8 +14,8 @@
     	<version>0.0.1</version>
     </parent>
 
-    <artifactId>cms-template</artifactId>
-    <groupId>com.alg.cms.template</groupId>
+    <artifactId>cms-<%= siteName %></artifactId>
+    <groupId>com.alg.cms.<%= siteName %></groupId>
 	<packaging>pom</packaging>
 
 	<profiles>
@@ -25,20 +25,20 @@
  				<activeByDefault>true</activeByDefault>
  			</activation>
 			<modules>
-				<module>template-bundles</module>
-				<module>template-view</module>
+				<module><%= siteName %>-bundles</module>
+				<module><%= siteName %>-view</module>
 			</modules>
  		</profile>
  		<profile>
- 			<id>template-bundles</id>
+ 			<id><%= siteName %>-bundles</id>
 			<modules>
-				<module>template-bundles</module>
+				<module><%= siteName %>-bundles</module>
 			</modules>
  		</profile>
  		<profile>
- 			<id>template-view</id>
+ 			<id><%= siteName %>-view</id>
 			<modules>
-				<module>template-view</module>
+				<module><%= siteName %>-view</module>
 			</modules>
 		</profile>
 	</profiles>

@@ -1,11 +1,11 @@
 // This is meant for use with external consumers of our globally shared items such as head & footer.
-var template$ = jQuery.noConflict(true);
+var <%= siteName %>$ = jQuery.noConflict(true);
 // The following occurs if there was no jquery previously defined on the page to begin with.
 if (typeof $ === 'undefined' || typeof jQuery === 'undefined') {
-    $ = template$;
-    jQuery = template$;
+    $ = <%= siteName %>$;
+    jQuery = <%= siteName %>$;
 }
-template$.createNs = function() {
+<%= siteName %>$.createNs = function() {
     var o, d;
     jQuery.each(arguments, function(v) {
         d = arguments[1].split(".");
@@ -16,20 +16,20 @@ template$.createNs = function() {
     });
     return o;
 };
-template$.createNs('alg');
-template$.createNs('alg.cms');
-template$.createNs('alg.cms.template');
-template$.createNs('alg.cms.template.components');
-template$.createNs('alg.cms.template.constants');
-template$.createNs('alg.cms.template.utils');
+<%= siteName %>$.createNs('alg');
+<%= siteName %>$.createNs('alg.cms');
+<%= siteName %>$.createNs('alg.cms.<%= siteName %>');
+<%= siteName %>$.createNs('alg.cms.<%= siteName %>.components');
+<%= siteName %>$.createNs('alg.cms.<%= siteName %>.constants');
+<%= siteName %>$.createNs('alg.cms.<%= siteName %>.utils');
 
 // putting this here temporarily for backwards compatibility
-template$.createNs('alg.cms.core');
-template$.createNs('alg.cms.core.utils');
+<%= siteName %>$.createNs('alg.cms.core');
+<%= siteName %>$.createNs('alg.cms.core.utils');
 
-alg.cms.template.utils.initAngularController = function(containerName) {
+alg.cms.<%= siteName %>.utils.initAngularController = function(containerName) {
 
-    template$(containerName).each(function() {
+    <%= siteName %>$(containerName).each(function() {
         angular.injectCQ(this);
     });
 
@@ -38,11 +38,11 @@ alg.cms.template.utils.initAngularController = function(containerName) {
 };
 
 // putting this here temporarily for backwards compatibility
-alg.cms.core.utils.initAngularController = alg.cms.template.utils.initAngularController;
+alg.cms.core.utils.initAngularController = alg.cms.<%= siteName %>.utils.initAngularController;
 
 
-alg.cms.template.constants.appName = "templateApp";
-var templateApp = angular.module(alg.cms.template.constants.appName, ['ui.bootstrap', 'ngAnimate', 'ngTouch', 'vcRecaptcha'])
+alg.cms.<%= siteName %>.constants.appName = "<%= siteName %>App";
+var <%= siteName %>App = angular.module(alg.cms.<%= siteName %>.constants.appName, ['ui.bootstrap', 'ngAnimate', 'ngTouch', 'vcRecaptcha'])
     .config(['$httpProvider', function($httpProvider) {
         $httpProvider.defaults.cache = true;
     }])
@@ -87,20 +87,20 @@ var templateApp = angular.module(alg.cms.template.constants.appName, ['ui.bootst
     .factory("ang$", [
         '$window',
         function($window) {
-            return $window.template$;
+            return $window.<%= siteName %>$;
         }
     ]);
 
 angular.injectCQ = function(elementname) {
 
-    var rootElement = template$('[ng-app]'),
-        $element = template$(elementname),
+    var rootElement = <%= siteName %>$('[ng-app]'),
+        $element = <%= siteName %>$(elementname),
         $elemArray;
     //Ensure ng-app has initialized and that the elementname has not been initialized
     if (rootElement && rootElement.hasClass('ng-scope') && $element.is('[ng-controller]') && !$element.hasClass('ng-scope')) {
         //Scan the controller's parents to find any un-initialized controllers
         //This is to prevent child controllers from compiling before parents
-        $elemArray = template$('[ng-controller]');
+        $elemArray = <%= siteName %>$('[ng-controller]');
 
         $elemArray.each(function() {
             var $elem = $(this);
@@ -120,7 +120,7 @@ angular.injectCQ = function(elementname) {
 
 };
 
-template$().ready(function() {
+<%= siteName %>$().ready(function() {
 
     _.mixin({
         'findByValues': function(collection, property, values) {

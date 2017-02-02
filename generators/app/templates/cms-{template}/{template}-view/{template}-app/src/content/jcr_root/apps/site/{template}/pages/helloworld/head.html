@@ -14,6 +14,6 @@
 
     <title>${head.title}</title>
 
-    <sly data-sly-call="${clientLib.css @ categories=['template-libs','helloworld-defaults','helloworld-components']}" />
-    <sly data-sly-call="${clientLib.js @ categories=['template-libs','helloworld-defaults','helloworld-components']}" />
+    <sly data-sly-call="${clientLib.css @ categories=['<%= siteName %>-libs','helloworld-defaults','helloworld-components']}" />
+    <sly data-sly-call="${clientLib.js @ categories=['<%= siteName %>-libs','helloworld-defaults','helloworld-components']}" />
 

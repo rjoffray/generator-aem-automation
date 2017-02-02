@@ -1,7 +1,7 @@
-(function (templateApp) {
+(function (<%= siteName %>App) {
     'use strict';
 
-    templateApp.controller('angularhelloworld-controller', angularhelloworldController);
+<%= siteName %>App.controller('angularhelloworld-controller', angularhelloworldController);
     angularhelloworldController.$inject = ["$log", "$http", "ang$"];
 
     function angularhelloworldController($log, $http, ang$) {
@@ -9,4 +9,4 @@
     }
 
 
-})(angular.module(alg.cms.template.constants.appName));
+})(angular.module(alg.cms.<%= siteName %>.constants.appName));

@@ -1,3 +1,3 @@
-com.alg.cms.template.common=cms/cms-base/cms-sites/cms-template/template-bundles/template-common/target/template-common-0.0.1.jar
-com.alg.cms.template.services=cms/cms-base/cms-sites/cms-template/template-bundles/template-services/target/template-services-0.0.1.jar
-com.alg.cms.template.viewmodel=cms/cms-base/cms-sites/cms-template/template-bundles/template-viewmodel/target/template-viewmodel-0.0.1.jar
+com.alg.cms.<%= siteName %>.common=cms/cms-base/cms-sites/cms-<%= siteName %>/<%= siteName %>-bundles/<%= siteName %>-common/target/<%= siteName %>-common-0.0.1.jar
+com.alg.cms.<%= siteName %>.services=cms/cms-base/cms-sites/cms-<%= siteName %>/<%= siteName %>-bundles/<%= siteName %>-services/target/<%= siteName %>-services-0.0.1.jar
+com.alg.cms.<%= siteName %>.viewmodel=cms/cms-base/cms-sites/cms-<%= siteName %>/<%= siteName %>-bundles/<%= siteName %>-viewmodel/target/<%= siteName %>-viewmodel-0.0.1.jar
