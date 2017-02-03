@@ -1,7 +1,7 @@
-(function (templateApp) {
+(function (<%= siteName %>App) {
     'use strict';
 
-    console.log("cms-template/template-view/template-app/src/content/jcr_root/apps/site/template/pages/helloworld/clientLibs Loaded");
+    console.log("cms-<%= siteName %>/<%= siteName %>-view/<%= siteName %>-app/src/content/jcr_root/apps/site/<%= siteName %>/pages/helloworld/clientLibs Loaded");
 
 
-})(angular.module(alg.cms.template.constants.appName));
+})(angular.module(alg.cms.<%= siteName %>.constants.appName));

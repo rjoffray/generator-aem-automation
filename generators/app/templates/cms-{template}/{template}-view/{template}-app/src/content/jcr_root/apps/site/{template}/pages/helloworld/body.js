@@ -5,7 +5,7 @@ var global = this;
 use([], function () {
     var editMode = wcmmode.edit?"editMode":"";
     return {
-        appName:"templateApp",
+        appName:"<%= siteName %>App",
         cssClasses: editMode,
         resourcePath: global.granite.resource.path
     };

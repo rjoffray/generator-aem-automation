@@ -54,8 +54,11 @@ module.exports = Generator.extend({
                     var newFileName  = file.name.replace(re,_this.props.siteName);
                     var relativeFilePath = baseDestinationPath  + path.substring(_this.templatePath().length).replace(re,_this.props.siteName) + "/" + newFileName;
                     console.log("relativeFilePath: " + relativeFilePath);
-                    if (path.indexOf("fonts") < 0 && path.indexOf("libs") < 0 && file.name.indexOf(".zip") < 0){
+                    if (path.indexOf("fonts") < 0 && path.indexOf("/libs/") < 0 && file.name.indexOf(".zip") < 0){
                         _this.fs.copyTpl(fileTemplatePath, relativeFilePath, _this.props);
+                    }
+                    if (path.indexOf("fonts") >= 0 || path.indexOf("/libs/") >= 0 ){
+                        _this.fs.copy(fileTemplatePath, relativeFilePath);
                     }
 
 
