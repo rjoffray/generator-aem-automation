@@ -1,4 +1,4 @@
-package com.alg.cms.template.common;
+package com.alg.cms.<%= siteName %>.common;
 
 /*
  * Copyright 1997-2010 Day Management AG
