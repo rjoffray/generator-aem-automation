@@ -1,4 +1,4 @@
-package com.alg.cms.template.viewmodel;
+package com.alg.cms.<%= siteName %>.viewmodel;
 
 /*
  * Copyright 1997-2010 Day Management AG
